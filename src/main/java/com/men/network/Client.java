@@ -69,6 +69,8 @@ public class Client {
                 System.out.println("Сообщение отправлено");
                 System.out.println("Ответ от сервера");
 
+                //создаём ресурсы на выходящий поток
+
                 InputStream in = clientSocket.getInputStream();
                 ObjectInputStream objectInputStream = new ObjectInputStream(in);
                 Msg msgOut = (Msg) objectInputStream.readObject();
